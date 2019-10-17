@@ -4,9 +4,14 @@ use std::env;
 use std::path::PathBuf;
 
 fn main() {
-    // Tell cargo to tell rustc to link the system bzip2
+    // Tell cargo to tell rustc to link the ggpo
     // shared library.
     println!("cargo:rustc-link-lib=ggpo");
+    // Dependencies 
+    println!("cargo:rustc-link-lib=ws2_32");
+    println!("cargo:rustc-link-lib=winmm");
+    println!("cargo:rustc-link-lib=kernel32");
+    println!("cargo:rustc-link-lib=user32");
 
     // Tell cargo to invalidate the built crate whenever the wrapper changes
     println!("cargo:rerun-if-changed=wrapper.h");
