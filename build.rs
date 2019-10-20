@@ -7,7 +7,7 @@ fn main() {
     // Tell cargo to tell rustc to link the ggpo
     // shared library.
     println!("cargo:rustc-link-lib=ggpo");
-    // Dependencies 
+    // Dependencies
     println!("cargo:rustc-link-lib=ws2_32");
     println!("cargo:rustc-link-lib=winmm");
     println!("cargo:rustc-link-lib=kernel32");
